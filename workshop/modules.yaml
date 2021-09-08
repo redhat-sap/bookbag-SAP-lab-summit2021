@@ -12,5 +12,11 @@ modules:
   exercise3:
     name: Exercise 3
     exit_sign: Continue
+  exercise3:
+    name: Exercise 4
+    exit_sign: Continue
+  exercise3:
+    name: Exercise 5
+    exit_sign: Continue
   review:
     name: Review
