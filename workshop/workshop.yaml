@@ -1,9 +1,12 @@
 ---
-name: Bookbag Template
+name: SAP Digital Platform in a Cloud Native and Hybrid Era
 modules:
   activate:
     - overview
     - exercise1
     - exercise2
     - exercise3
+    - exercise4
+    - exercise5
+    - exercise6
     - review
