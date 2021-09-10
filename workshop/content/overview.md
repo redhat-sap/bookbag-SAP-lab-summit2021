@@ -1,7 +1,3 @@
-:guid: %guid%
-:user: %user%
-:markup-in-source: verbatim,attributes,quotes
-
 # Intro
 
 This workshop can be used to demonstrate the integration capabilities for Red Hat Integration portfolio with SAP's Digital Core.
@@ -22,17 +18,19 @@ And an OpenShift 4.x cluster with the following components deployed:
 * **Backend Microservice:** used to demonstrate the integration with SAP S/4HANA using Red Hat Fuse.
 * **Frontend Microservice:** used to present the data coming from SAP S/4HANA and SAP HANA to the user.
 
+![Lab architecture](images/lab_architecture.png)
+
 image:images/lab_architecture.png[
 "Lab architecture",width=256,height=256,
 link="images/lab_architecture.png"]
 
 # Lab Access
-This environment is provisioned using the Red Hat internal demo system. We at Red Hat embrace the use of IaC (Infrastructure as Code) for any lab/demo set up, that's why we have open-sourced the Framework (based in Ansible) we use for this. If you want to get more information on this topic, check the link:https://github.com/redhat-cop/agnosticd[AgnosticD] repository we use to deploy these labs and demos.
+This environment is provisioned using the Red Hat internal demo system. We at Red Hat embrace the use of IaC (Infrastructure as Code) for any lab/demo set up, that's why we have open-sourced the Framework (based in Ansible) we use for this. If you want to get more information on this topic, check the [GitHub](https://github.com/redhat-cop/agnosticd) repository we use to deploy these labs and demos.
 
 
 
 
-An example var was set to %example_var%.
+
 
 The access details contain:
 
