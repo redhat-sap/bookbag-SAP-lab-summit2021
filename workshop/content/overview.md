@@ -20,10 +20,6 @@ And an OpenShift 4.x cluster with the following components deployed:
 
 ![Lab architecture](images/lab_architecture.png)
 
-image:images/lab_architecture.png[
-"Lab architecture",width=256,height=256,
-link="images/lab_architecture.png"]
-
 # Lab Access
 This environment is provisioned using the Red Hat internal demo system. We at Red Hat embrace the use of IaC (Infrastructure as Code) for any lab/demo set up, that's why we have open-sourced the Framework (based in Ansible) we use for this. If you want to get more information on this topic, check the [GitHub](https://github.com/redhat-cop/agnosticd) repository we use to deploy these labs and demos.
 
