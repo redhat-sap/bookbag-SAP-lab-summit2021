@@ -37,17 +37,17 @@ Also you will need to change the following files to match your own repo for Argo
 - argocd/argo-app-fe-qa.yml
 - argocd/argo-app-fe-cicd.yml
 
-## Deploy OpenShift Pipelines Operator (Tekton)
+### Deploy OpenShift Pipelines Operator (Tekton)
 
-This can be done using the OpenShift Console as well, installing Red Hat OpenShift Pipelines Operator from OperatorHub. If you want to use the terminal instead, just execute the following instructions.
+This can be done using the OpenShift Console as well, installing `Red Hat OpenShift Pipelines Operator` from OperatorHub. If you want to use the terminal instead, just execute the following instructions.
 
 ```bash
 oc create -f tekton/subscription.yml
 ```
 
-## Deploy Argo CD Operator
+### Deploy Argo CD Operator
 
-This can be done using the OpenShift Console as well, installing Argo CD from OperatorHub. If you want to use the terminal instead, just execute the following instructions.
+This can be done using the OpenShift Console as well, installing `Argo CD` from OperatorHub. If you want to use the terminal instead, just execute the following instructions.
 
 ```bash
 oc create -f argocd/namespace.yml
@@ -55,7 +55,7 @@ oc create -f argocd/operatorgroup.yml
 oc create -f argocd/subscription.yml
 ```
 
-## Create an Argo CD Deployment
+### Create an Argo CD Deployment
 
 ```bash
 oc create -f argocd/argocd.yml -n argocd
@@ -83,16 +83,16 @@ oc get secret sap-argocd-cluster -o jsonpath='{.data.admin\.password}' | base64 
 
 Use the credential for Argo CD `admin` user to login into Argo webconsole and you should see something similar to this, whith all the applications managed by Argo CD started to sync their objects into OpenShift.
 
-![Argo Applications](img/argo01.png)
+![Argo Applications](images/argo01.png)
 
 If you click on any of the Applications you can see more details on the objects that have been synced already and the actual status.
 
 
-![Argo Application details](img/argo02.png)
+![Argo Application details](images/argo02.png)
 
 If you check the existing Pipelines on any of the `cicd `Projects that have been created in OpenShift you will see the Pipeline status and the results from the first PipelineRun once you have committed any code to your GitHub `dev` or `qa` branches. This will not happen until you follow the last step explained bellow configuring your GitHub hooks to notify the EventListeners configured for your Pipelines.
 
-![Pipeline](img/tekton01.png)
+![Pipeline](images/tekton01.png)
 
 ## Configure your GitHub hook
 
