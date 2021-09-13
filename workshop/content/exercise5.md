@@ -62,7 +62,7 @@ oc create -f argocd/argocd.yml -n argocd
 oc create -f argocd/cluster-role-bind.yml
 ```
 
-## Create new Applications in Argo CD
+### Create new Applications in Argo CD
 
 ```bash
 oc create -f argocd/argo-app-be-dev.yml
@@ -73,13 +73,13 @@ oc create -f argocd/argo-app-be-cicd.yml
 oc create -f argocd/argo-app-fe-cicd.yml
 ```
 
-## Get Argo CD credentials for `admin` user
+### Get Argo CD credentials for `admin` user
 
 ```
 oc get secret sap-argocd-cluster -o jsonpath='{.data.admin\.password}' | base64 -d
 ```
 
-## Check results
+### Check results
 
 Use the credential for Argo CD `admin` user to login into Argo webconsole and you should see something similar to this, whith all the applications managed by Argo CD started to sync their objects into OpenShift.
 
@@ -94,7 +94,7 @@ If you check the existing Pipelines on any of the `cicd `Projects that have been
 
 ![Pipeline](images/tekton01.png)
 
-## Configure your GitHub hook
+### Configure your GitHub hook
 
 On each GitHub repository you need to configure 2 different hooks. Use the following command to get the endpoint information for each one:
 
