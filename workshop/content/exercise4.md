@@ -20,9 +20,24 @@ This is the process flow of the scenario:
 
 ![Serverless flow](images/serverless_flow.png)
 
-# 
+In this exercise we are going to integrate Slack with an SAP S/4HANA backend. We will ask about a sales order number on Slack and the SAP backend will receive this sales order number and return the details of the order back to the Slack channel we are using.
 
 Select the project `sap-serverless` in the `Administrator` view, change to `Developer` view and go to `Topology`
 
-![Change Project](images/change_project.gif)
+![Change Project](images/topology.gif)
 
+There you can see all the components of the solution:
+
+- Kamelet source that captures requests from Slack as events
+- Channel where the sales order number received from Slack is sent to the Camel K application that integrates with the SAP S/4HANA backend
+- Channel where the response from SAP with the data of the sales order is sent back
+- Camel K application that sends the sales order number to SAP
+- Camel K aplication that sends the details of the sales order from SAP back to Slack
+
+# Steps
+
+Connect to the `sales-order` channel created in SLack for this exercise https://redhat-sap-demos.slack.com/archives/C01R3NFP54H and keep open your Openshift console in the `Topology` section so that you can see how the pods scale up and down when the requests are received and served.
+
+Type a valid sale order number in the Slack chat, for example any number between 500000001 and 500000099. You will be see then how the `sap-odata` pod where the application that sends the sales order number to SAP runs will scale up. After that, once the repsonse has been produces by the SAP backend, the `sap-sales-slack` pod will scale up as well so that it can send the response to the Slack channel and finally after some time you will see this response with the sales order details on the Slack chat.
+
+![Slack response](images/slack.png)
