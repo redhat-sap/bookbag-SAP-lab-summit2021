@@ -47,12 +47,14 @@ This can be done using the OpenShift Console as well, installing Red Hat OpenShi
 
 This can be done using the OpenShift Console as well, installing Argo CD from OperatorHub. If you want to use the terminal instead, just execute the following instructions.
 
-
+`   oc create -f argocd/namespace.yml`
+`   oc create -f argocd/operatorgroup.yml`
+`   oc create -f argocd/subscription.yml`
 
 ## Create an Argo CD Deployment
 
-```oc create -f argocd/argocd.yml -n argocd
-oc create -f argocd/cluster-role-bind.yml```
+oc create -f argocd/argocd.yml -n argocd
+oc create -f argocd/cluster-role-bind.yml
 
 ## Create new Applications in Argo CD
 
