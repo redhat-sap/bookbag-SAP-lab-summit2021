@@ -100,12 +100,12 @@ On each GitHub repository you need to configure 2 different hooks. Use the follo
 
 - Frontend microservices hook endpoitns
 
-```bash
+    ```bash
      oc get routes -n app-fe-cicd fe-pipeline-webhook-dev -o jsonpath='{.spec.host}'
      oc get routes -n app-fe-cicd fe-pipeline-webhook-qa -o jsonpath='{.spec.host}'
     ```
-- Backend microservices hook endpoitns
 
+- Backend microservices hook endpoitns
 
     ```bash
      oc get routes -n app-be-cicd be-pipeline-webhook-dev -o jsonpath='{.spec.host}'
