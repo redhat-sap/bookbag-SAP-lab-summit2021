@@ -1,8 +1,8 @@
 {
     "guid": "abcde",
     "example_var": 42,
-    "ssh_command": "ssh lab-user@bastion.abcde.example.com",
-    "ssh_password": "p4ssword!1",
+    "ssh_command": "ssh lab-user@bastion.4x67.sandbox1749.opentlc.com",
+    "ssh_password": "r3dh4t1!",
     "user": "lab-user",
-    "user_info_messages": "Example workshop messages:\nHello, World"
+    "user_info_messages": "Example workshop messages:\nHola a todo el mundo"
 }
