@@ -31,7 +31,7 @@ Once we have imported both clusters we will be able to see them along with the i
 
 ![Cluster list](images/cluster-list.png)
 
-Log on to one of your clusters, for example the DP Fuse one. We can see that on the project list now there is a new one called `open-cluster-management`, if we select it on the `Developer` view and look at `Topology` we will see all the components that are being deployed.
+Log on to one of your clusters, for example the DP OpenShift one. We can see that on the project list now there is a new one called `open-cluster-management`, if we select it on the `Developer` view and look at `Topology` we will see all the components that are being deployed.
 
 ![ACM components](images/acm-components.png)
 
