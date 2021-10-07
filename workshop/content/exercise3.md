@@ -24,6 +24,6 @@ When filling the information not all the fields are mandatory. You can create a 
 
 Once we have created the new customer, click on the Home link to use the form that will search for existing customers and try to find the one we have just created to ensure this has been added to the database. You can use wildcards to search for the customer.
 
-![FE customer 2](images/fe_customer_02.gif)
+![FE customer 2](images/search_customer.gif)
 
 You should get the information from the customer, demonstrating again the whole flow, getting information from the SAP HANA schema from a custom frontend microservice deployed in OpenShift.
