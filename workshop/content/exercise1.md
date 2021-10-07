@@ -8,9 +8,7 @@ A user in (https://api.sap.com) is required to complete this configuration. A fr
 
 Once you have created a user for SAP Business Hub, you can now login into **Red Hat 3scale API Management** which has been deployed already in your environment using the `Red Hat Integration - 3scale` Operator in the `3scale` Namespace.
 
-image:images/3scale_operator.png[
-"3Scale operator",width=256,height=256,
-link="images/3scale_operator.png"]
+![3Scale operator](images/3scale_operator.png)
 
 You can find all the exposed Routes for 3scale under `Networking - Routes` in the `3scale` Project. If you filter by `zync-3scale-provider` both the 3scale API Management and Developer Portal URLs info will be shown. You will receive this information as well in the email you will get with all the environment information.
 
