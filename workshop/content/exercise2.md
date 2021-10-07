@@ -18,7 +18,7 @@ Let's review now how to access the exposed URL for this microservice. As explain
 
 ![Route side](images/route_be.png)
 
-Once you click in the URL link this will be opened in your default browser and you will get a **Whitelabel Error Page** error. This is expected as you need to append the following path to the URL to get to Swagger UI page: `/webjars/swagger-ui/3.28.0/index.html?url=/sap-fuse-workshop/api-doc#`. Once you add this you should be able to see Swagger UI for this specific API with all the available methods so you can test those and get more information from each one.
+Once you click in the URL link this will be opened in your default browser and you will get a **Whitelabel Error Page** error. This is expected as you need to append the following path to the URL to get to Swagger UI page: `/webjars/swagger-ui/3.28.0/index.html?url=/sap-fuse-workshop/api-doc#`, so your URL will look like this for example `https://sap-side-by-side-be.apps.your-cluster.whatever.com/webjars/swagger-ui/3.28.0/index.html?url=/sap-fuse-workshop/api-doc#` Once you add this you should be able to see Swagger UI for this specific API with all the available methods so you can test those and get more information from each one.
 
 ![Swagger 1](images/swagger_01.png)
 

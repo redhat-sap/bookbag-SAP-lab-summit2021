@@ -35,9 +35,9 @@ After skipping the assistant, you will be presented to the 3scale API Management
 
 Once the new Product has been created, you need to create a **BACKEND** that will be used for this Product. This Backend will be used to define our API configuration, including the Private Base URL, Methods and Mapping Rules. At this point, you will go back to +Analytical Reporting - View Management API+ definition in [SAP Business Hub](https://api.sap.com/api/analytics_reporting_view/overview) to understand the existing API References and Specifications for that particular API. As you can see there are 4 different methods available for this API.
 
-![API methods](images/api_methods.png)
+![SAP Business Hub](images/sap-business-hub.gif)
 
-If you click on the `Code Snippet` link for any of these methods, you can see the URL used to call this method (you will get the information from the Sandbox System URL, for production purposes another one from the available list will be used, but not for this demo) as well as values that can be parametrized or a custom header that needs to be added to this request which requires authentication.
+If you click on the `Code Snippet` link for any of these methods and choose the `Curl` format, you can see the URL used to call this method (you will get the information from the Sandbox System URL, for production purposes another one from the available list will be used, but not for this demo) as well as values that can be parametrized or a custom header that needs to be added to this request which requires authentication.
 
 ![Code snippet](images/code_snippet.png)
 
@@ -102,7 +102,7 @@ Let's promote your APIcast configuration to Stage, validate you can use any of t
 
 ![3Scale promotion](images/3scale_stage_promotion.gif)
 
-Once the APIcast has been promoted to Stage you can test it. From the same window where you have promoted to Stage, check the `Staging APIcast` section and get the URL from `Example curl for testing`. There are different ways to check this. You can use your browser, or you can use curl or a tool like `Postman`, which is the option selected for this demo. Check the `Analytical Reporting` backend configuration on the `APIcast Configuration` section form the same window you did the promotion. You will see the initial configuration done for the `Analytical Reporting` Backend you did when configuring the Backend. The `Public Path` configured for this one, in particular, is `/reporting`, and this is the path we need to add to the Stagging URL to test our API.
+Once the APIcast has been promoted to Stage you can test it. From the same window where you have promoted to Stage, check the `Staging APIcast` section and get the URL from `Example curl for testing`. There are different ways to check this. You can use your browser, or you can use curl or a tool like `Postman` (you can use the online version creating a free acount on https://www.postman.com/), which is the option selected for this demo. Check the `Analytical Reporting` backend configuration on the `APIcast Configuration` section form the same window you did the promotion. You will see the initial configuration done for the `Analytical Reporting` Backend you did when configuring the Backend. The `Public Path` configured for this one, in particular, is `/reporting`, and this is the path we need to add to the Stagging URL to test our API.
 
 ![APIcast path](images/apicast_path.png)
 
@@ -122,7 +122,11 @@ As you can notice, you don't need to provide the APIKey Header to authenticate w
 
 ![Stats 1](images/stats01.png)
 
-You can try to do the same with the other methods exposed by the `Analytical Reporting - View Management API` and check the results are the same when doing the request to 3scale APIcast or doing it directly in SAP Business Hub. If we want users and developers to consume these APIs, they will need to get access to the Swagger Specification. To facilitate this we can import these specifications into 3scale. Go back to `Analytical Reporting - View Management API` definition in [SAP Business Hub](https://api.sap.com/api/analytics_reporting_view/overview) and click on `Download API Specification` button and download it as a **JSON** file. Go back to `3scale API Management` portal and select `Audience` from the top menu. Then select `Developer Portal - ActiveDocs` and use the `Create a new spec` link from the right. Add the following information when prompted:
+You can try to do the same with the other methods exposed by the `Analytical Reporting - View Management API` and check the results are the same when doing the request to 3scale APIcast or doing it directly in SAP Business Hub. If we want users and developers to consume these APIs, they will need to get access to the Swagger Specification. To facilitate this we can import these specifications into 3scale. Go back to `Analytical Reporting - View Management API` definition in [SAP Business Hub](https://api.sap.com/api/analytics_reporting_view/overview) and click on `Download API Specification` button and download it as a **JSON** file. 
+
+![Download API](images/download-api-json.gif)
+
+Go back to `3scale API Management` portal and select `Audience` from the top menu. Then select `Developer Portal - ActiveDocs` and use the `Create a new spec` link from the right. Add the following information when prompted:
 
 * Name: Analytical Reporting - View Management API
 * System Name: AnalyticalReportingView

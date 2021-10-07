@@ -18,9 +18,9 @@ Once you click in the URL link this will be opened in your default browser. Ther
 
 To demonstrate the functionality and the whole flow, we are going to create a customer first, and then search for this new customer to ensure we can retrieve it. In the background, the Angular frontend will consume the exposed API from the Fuse backend, which is retrieving the information from S/4HANA via JCo, which is getting this info from FLIGHT schema in SAP HANA.
 
-When filling the information not all the fields are mandatory. You can create a new customer just providing values for `custType, Customername` and `Discount`:
+When filling the information not all the fields are mandatory. You can create a new customer just providing values for `custType, Customername` and `Street` (you can use your name as `Customername):
 
-![FE customer 1](images/fe_customer_01.gif)
+![FE customer 1](images/create_customer.gif)
 
 Once we have created the new customer, click on the Home link to use the form that will search for existing customers and try to find the one we have just created to ensure this has been added to the database. You can use wildcards to search for the customer.
 
