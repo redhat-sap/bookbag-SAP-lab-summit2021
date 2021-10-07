@@ -18,5 +18,8 @@ modules:
   exercise5:
     name: Exercise 5
     exit_sign: Continue
+  exercise6:
+    name: Exercise 6
+    exit_sign: Continue
   review:
     name: Review

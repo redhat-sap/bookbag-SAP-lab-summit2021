@@ -8,7 +8,7 @@ In this exercise we will create a cluster hub with 2 OpenShift clusters, we will
 
 # Steps 
 
-First of all we need to install the OpenShift Advanced Cluster Management operator
+First of all we need to install the OpenShift Advanced Cluster Management operator in the DP OpenShift cluster
 
 ![ACM operator](images/acm-operator.png)
 
@@ -19,19 +19,19 @@ Once it is installed we will be able to log on to the ACM console
 
 ### Add cluster to ACM
 
-To add the clusters we will use the API token and URL as import mode, so we need to retrieve this info from the login credentials of our existing clusters.
+To add the other cluster (the DP Fuse) we will use the API token and URL as import mode, so we need to retrieve this info from the login credentials of that cluster.
 
 ![Token and URL](images/token&URL.gif)
 
-In the ACM console select `Clusters` and click on `Import cluster`. There we will add first one of our existing clusters, for example the DP Fuse one and then the other one. We will also create labels for the applications that we will deploy, the backend and the frontend that we have used in Exercise 3 of this lab.
+In the ACM console select `Clusters` and click on `Import cluster`. The cluster name will be `prod` We will also create labels for the applications that we will deploy, the backend and the frontend that we have used in Exercise 3 of this lab, the labels will be `app-be=true` and `app-fe=true`.
 
 ![Import cluster](images/import-cluster.gif)
 
-Once we have imported both clusters we will be able to see them along with the infrastructure they are deployed on. We will click on each of them now and edit the labels to add `app-be=true` and `app-fe=true` on both; these two labels will serve to indicate that the 2 applications that we are going to deploy later will be on both clusters.
+Once we have imported the DP Fuse cluster, we will see that also the `local-cluster` has been added and we will be able to see them along with the infrastructure they are deployed on. We will click on the `local-cluster` and edit the labels to add `app-be=true` and `app-fe=true` for it two; as mentioned before, these two labels will serve to indicate that the 2 applications that we are going to deploy later will be on both clusters.
 
 ![Cluster list](images/cluster-list.png)
 
-Log on to one of your clusters, for example the DP Fuse one. We can see that on the project list now there is a new one called `open-cluster-management`, if we select it on the `Developer` view and look at `Topology` we will see all the components that are being deployed.
+Log on to one of your clusters, for example the DP OpenShift one. We can see that on the project list now there is a new one called `open-cluster-management`, if we select it on the `Developer` view and look at `Topology` we will see all the components that are being deployed.
 
 ![ACM components](images/acm-components.png)
 
@@ -56,6 +56,8 @@ Since we added these labels to our two clusters when we imported them in ACM, bo
 Now we can access the application from the ACM console, for example the frontend.
 
 ![Access application](images/access-application.gif)
+
+And also if we go to any of the clusters we will see the namespaces `app-fe-acm` and `app-be-acm` have been created  and we can see the application in the `Topology` view.
 
 ### Create policy for resource consumption
 
