@@ -1,14 +1,16 @@
-FROM quay.io/openshifthomeroom/workshop-dashboard:5.0.0
+FROM docker.io/alpine
 
-USER root
+#FROM quay.io/openshifthomeroom/workshop-dashboard:5.0.0
 
-COPY . /tmp/src
+#USER root
 
-RUN rm -rf /tmp/src/.git* && \
-    chown -R 1001 /tmp/src && \
-    chgrp -R 0 /tmp/src && \
-    chmod -R g+w /tmp/src
+#COPY . /tmp/src
 
-USER 1001
+#RUN rm -rf /tmp/src/.git* && \
+#    chown -R 1001 /tmp/src && \
+#    chgrp -R 0 /tmp/src && \
+#    chmod -R g+w /tmp/src
 
-RUN /usr/libexec/s2i/assemble
+#USER 1001
+
+#RUN /usr/libexec/s2i/assemble
