@@ -36,7 +36,7 @@ There you can see all the components of the solution:
 
 # Steps
 
-Connect to the `sales-order` channel created in Slack for this exercise https://redhat-sap-demos.slack.com/archives/C01R3NFP54H and keep open your Openshift console in the `Topology` section so that you can see how the pods scale up and down when the requests are received and served.
+Connect to the `sales-order` channel created in Slack for this exercise https://redhat-sap-demos.slack.com/archives/C01R3NFP54H and keep open your Openshift console in the `Topology` section so that you can see how the pods scale up and down when the requests are received and served. If you are not familiar with Slack you can check the documentation on how to join a worksapce (https://slack.com/intl/en-gb/help/articles/212675257-Join-a-Slack-workspace) and a channel (https://slack.com/intl/en-gb/help/articles/205239967-Join-a-channel)
 
 Type a valid sale order number in the Slack chat, for example any number between 500000001 and 500000099. You will be see then how the `sap-odata` pod where the application that sends the sales order number to SAP runs will scale up and then down once it has sent the information to SAP. After that, once the repsonse has been produced by the SAP backend, the `sap-sales-slack` pod will scale up as well so that it can send the response to the Slack channel and finally after some time you will see this response with the sales order details on the Slack chat. and the `sap-sales-slack` pod will be scaled down again.
 

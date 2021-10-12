@@ -12,7 +12,11 @@ First of all we need to install the OpenShift Advanced Cluster Management operat
 
 ![ACM operator](images/acm-operator.png)
 
-Once it is installed we will be able to log on to the ACM console
+And now we need to create the MultiClusterHub resource (we are asked to do that when the installation of the operator finishes)
+
+![MultiClusterHub](images/multiclusterhub.png)
+
+Once it is installed (the status on `Operators -> Installed Operators -> Advanced Cluster Management for Kubernetes -> MultiClusterHub` will be Running) we will be able to log on to the ACM console. To get its URL we go to `Networking -> Routes` and we will see the URL for the `multicloud-console`, the credentials are the same as for the `SAP DP OpenShift` cluster
 
 ![ACM console](images/log-on-acm.gif)
 
@@ -78,3 +82,21 @@ limits.ephemeral-storage: 10Gi
 ```
 
 So the maximum resources that can be allocated are 2 CPUs, 4GB of RAM and 10GB of disk.
+
+Policies are defined at namespace level. At the moment we will see in `Governance` that both clusters are violting the policy.
+
+![Policy violation](images/policy-violation.png)
+
+And if we look at the cause it is because no quotas have been defined yet.
+
+![Violation cause](images/policy-violation-cause.gif)
+
+We need to enforce the policy and then the quotas will be created automatically.
+
+![Enforce policy](images/enforce.gif)
+
+Once enforced we will see that there are no policy violations anymore. If we go to any of the clusters to the namespaces of the applications we have created (`app-be-acm` or `app-fe-acm`) and go to `Administration -> Resource Quotas` we will be able to see the current resource quotas.
+
+Now we will try to modify the resources and add more than what the policy allows, we will get an error and then we will revert back to a value permitted by the policy and we will see we are able to assign it. For this we will go for example to the DP Fuse cluster, to the `app-be-acm` project and there to `Workloads -> DeploymentConfigs` where we will be able to edit the `YAML` definition.
+
+![Policy test](images/apply-policy.gif)
